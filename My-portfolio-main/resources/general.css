@@ -1,0 +1,294 @@
+/* ////////////////
+/////GENERAL STYLES/////
+//////////////// */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georama", sans-serif;
+  color: #d4eaff;
+  cursor: none;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #2f3032;
+}
+
+.cta-btn:link,
+.cta-btn:visited {
+  border: 2px solid #5a95cc;
+  border-radius: 3px;
+  color: #70baff;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+  background-color: rgba(112, 186, 255, 0.151);
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.section-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #5a95cc;
+}
+
+.section-heading {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.web-logo {
+  width: 6.3rem;
+}
+
+/* ////////////////
+/////CUSTOM CURSOR/////
+//////////////// */
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+}
+
+.outer {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #d4eaff;
+  transition: all 0.08s ease-out;
+}
+
+.inner {
+  width: 7px;
+  height: 7px;
+  background: #5a95cc;
+}
+
+#header:hover ~ .outer {
+  width: 0px;
+  height: 0px;
+}
+
+#header:hover ~ .inner {
+  width: 10px;
+  height: 10px;
+  background-color: #d4eaff;
+}
+
+#socials:hover ~ .outer {
+  width: 0px;
+  height: 0px;
+}
+
+#socials:hover ~ .inner {
+  width: 10px;
+  height: 10px;
+  background-color: #d4eaff;
+}
+
+#email:hover ~ .outer {
+  width: 0px;
+  height: 0px;
+}
+
+#email:hover ~ .inner {
+  width: 10px;
+  height: 10px;
+  background-color: #d4eaff;
+}
+
+/* ////////////////
+/////STICKY ELEMENTS/////
+//////////////// */
+
+/* Page indicator */
+
+#page-indicator {
+  position: fixed;
+  gap: 2.4rem;
+  bottom: 0;
+  width: 6rem;
+  left: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.indicator {
+  height: 1rem;
+  width: 3rem;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(173, 215, 255, 0.616);
+}
+
+#stick {
+  width: 2px;
+  height: 35vh;
+  background-color: rgba(173, 215, 255, 0.616);
+}
+
+.active {
+  width: 6rem;
+  background-color: #d4eaff;
+}
+
+/* Page name */
+
+#current-name {
+  position: fixed;
+  top: 20rem;
+  transform: rotate(-90deg);
+  left: 6rem;
+  font-weight: 600;
+  display: flex;
+  height: 2.5rem;
+  width: 10rem;
+  font-size: 2.4rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+
+/* E-mail */
+
+#email {
+  position: fixed;
+  bottom: 15rem;
+  transform: rotate(90deg);
+  right: -4rem;
+  font-weight: 500;
+  display: flex;
+  font-size: 2.4rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#collab-email {
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+#email a {
+  text-decoration: none;
+  color: rgba(173, 215, 255, 0.616);
+}
+
+#email a:hover {
+  color: #d4eaff;
+}
+
+#collab-email a {
+  text-decoration: none;
+  color: rgba(173, 215, 255, 0.616);
+}
+
+#collab-email a:hover {
+  color: #d4eaff;
+}
+
+/* Socials */
+
+#socials {
+  position: fixed;
+  gap: 2.4rem;
+  top: 19rem;
+  right: 9.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#collab-socials {
+  gap: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4.8rem;
+}
+
+.socials-icon {
+  height: 2rem;
+  width: 2rem;
+  color: rgba(173, 215, 255, 0.616);
+}
+
+#socials a:nth-child(1) .socials-icon:hover {
+  color: #e1306c;
+}
+
+#socials a:nth-child(2) .socials-icon:hover {
+  color: #25d366;
+}
+
+#socials a:nth-child(3) .socials-icon:hover {
+  color: #6e5494;
+}
+
+#socials a:nth-child(4) .socials-icon:hover {
+  color: #0e76a8;
+}
+
+#collab-socials a:nth-child(1) .socials-icon:hover {
+  color: #e1306c;
+}
+
+#collab-socials a:nth-child(2) .socials-icon:hover {
+  color: #25d366;
+}
+
+#collab-socials a:nth-child(3) .socials-icon:hover {
+  color: #6e5494;
+}
+
+#collab-socials a:nth-child(4) .socials-icon:hover {
+  color: #0e76a8;
+}
+/* ////////////////
+/////STICKY PAGE HEADER/////
+//////////////// */
+
+.floating #header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 100;
+  padding: 1.2rem 3.2rem;
+  background-color: rgba(47, 48, 50, 0.829);
+}
+
+.floating #hero {
+  margin-top: 7.5rem;
+}
